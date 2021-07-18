@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="187" height="31" viewBox="0 0 187 31">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 14px;
+        fill: #fff;
+        font-family: Montserrat;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .cls-2 {
+        font-weight: 300;
+      }
+    </style>
+  </defs>
+  <text id="MAGbank" class="cls-1" transform="translate(-0.022 30.059) scale(2.858)">MAG<tspan class="cls-2">bank</tspan></text>
+</svg>
