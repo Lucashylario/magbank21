@@ -9,7 +9,7 @@ const Hero = () => (
         <Container>
             <Row>
                 <Col lg className='text-lg-right'>
-                    <Image className='d-lg-none magic-logo-mobile text-center' src={logo} /> 
+                    <Image className='d-lg-none magic-logo-mobile' src={logo} /> 
                     <Image className='d-none d-lg-inline-block content-hero magic-logo-desktop' src={logoDesktop} />
                 </Col>
                 <Col lg className='text-lg-left'>
