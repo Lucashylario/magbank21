@@ -1,0 +1,28 @@
+.hero {
+    width: auto;
+    height: 90vh;
+    background-image: url('../assets/images/hero.jpg');
+    background-size: cover;
+    background-position: center top;
+
+    .content-hero {
+        margin-top: 300px;
+    }
+    
+    .magic-logo-desktop {
+        width: 28vw;
+        /*height: 296px;*/
+    }
+    
+    .text-hero {
+        font-size: 25px;    
+    }
+
+    .button-hero {
+        font-size: 20px;
+        width: 212px;
+        height: 54px;
+    }
+}
+
+

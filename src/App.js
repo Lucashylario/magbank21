@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import "./App.scss";
-import Hero from './components/hero';
+import Hero from './components/Hero';
 
 const App = () => (
     <div className="App">
