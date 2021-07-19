@@ -23,6 +23,41 @@
         width: 212px;
         height: 54px;
     }
+
+}
+@media screen and (max-width: 991px) {
+
+    .hero {
+        width: auto;
+        height: 58.3vh;
+    }
+
+    .magic-logo-mobile {
+        margin-top: 87px !important;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .content-hero {
+        margin: 0 !important;
+    }
+    
+    .col-lg {
+        display: grid;
+        justify-items: center;
+    }
+
+    .text-hero {
+        margin-top: 26px !important;
+        margin-bottom: 57px !important;
+        font-size: 20px !important;    
+    }
+
+    .button-hero {
+        margin-bottom: 60px;
+    }
+
 }
 
 
