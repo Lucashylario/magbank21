@@ -6,7 +6,7 @@ import './Hero.css';
 
 const Hero = () => (
     <Jumbotron className='text-light hero'>
-        
+        <Container>
             <Row>
                 <Col lg className='text-lg-right'>
                     <Image className='d-lg-none magic-logo-mobile' src={logo} /> 
@@ -17,6 +17,7 @@ const Hero = () => (
                     <Button variant='outline-light button-hero'>Abra sua conta</Button>
                 </Col>
             </Row>
+        </Container>
     </Jumbotron>
 );
 
