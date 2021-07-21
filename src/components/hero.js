@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Jumbotron, Button, Image, Container } from 'react-bootstrap';
 import logo from '../assets/images/magic-pay-logo-mobile.png';
 import logoDesktop from '../assets/images/magic-pay-logo.png';
-import './Hero.css';
+import './Hero.scss';
 
 const Hero = () => (
     <Jumbotron className='text-light hero'>
