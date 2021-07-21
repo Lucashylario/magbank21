@@ -2,9 +2,9 @@ import React from 'react';
 import { Row, Col, Jumbotron, Button, Image, Container } from 'react-bootstrap';
 import logo from '../assets/images/magic-pay-logo-mobile.png';
 import logoDesktop from '../assets/images/magic-pay-logo.png';
-import './Hero.scss';
+import './Banner.scss';
 
-const Hero = () => (
+const Banner = () => (
     <Jumbotron className='text-light hero'>
         <Container>
             <Row>
@@ -21,4 +21,4 @@ const Hero = () => (
     </Jumbotron>
 );
 
-export default Hero;
+export default Banner;
