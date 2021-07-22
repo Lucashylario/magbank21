@@ -1,11 +1,11 @@
 import React from 'react';
 import "./App.scss";
 import Banner from './components/Banner';
+import CardList from './components/CardList';
 import CreditCard from './components/CreditCard';
 import Navbar from './components/Navbar';
-//import CardList from './components/CardList';
 
-//import posts from './data/posts';
+import posts from './data/posts';
 
 const App = () => (
     <div className="App">
@@ -13,9 +13,10 @@ const App = () => (
       <Banner />
 
       <CreditCard />
+      <CardList posts={posts} />
     </div>
 );
 //<CenteredButton>Abra sua conta</CenteredButton>
-//<CardList posts={posts} />
+
 
 export default App;
