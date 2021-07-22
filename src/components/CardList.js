@@ -5,7 +5,8 @@ import './CardList.scss';
 const CardList = ({ posts }) => (
     <Container>
         <Row>
-            {posts.map(({ id, image, title, excerpt, action }) => (
+            {posts &&
+            posts.map(({ id, image, title, excerpt, action }) => (
                 <Col xs={12} lg={4} key={id}>
                     <Card className='mx-auto my-3'>
                         <Card.Img variant='top' src={image} />
