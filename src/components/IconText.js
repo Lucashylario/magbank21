@@ -5,10 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const IconText = ({ icon, size = 1, color = '#000', className = '', children, }) => (
     <Row>
-        <Col xs={typeof size == Number ? `${size}x` : size} className='d-flex justify-content-center'>
+        <Col xs={size} className='d-flex justify-content-center'>
             <FontAwesomeIcon 
                 icon={icon}
-                size={size}
+                size={`${size}x`}
                 color={color}
             />
         </Col>
