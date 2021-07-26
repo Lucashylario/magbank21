@@ -1,0 +1,10 @@
+@import '../variables';
+
+.button-card-list {
+    background-color: $color-secondary !important;
+    border-color: $color-secondary !important;  
+}
+.button-card-list:hover {
+    background-color: #bd4444 !important;
+    border-color: #bd4444 !important;
+}
