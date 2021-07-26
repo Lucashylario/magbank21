@@ -3,7 +3,7 @@ import { Col, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-const IconText = ({ icon, size = 1, color = '#000', className = '', children, }) => (
+const IconText = ({ icon, size = 1, color = '#000', className = '', textClassName = '', children, }) => (
     <Row>
         <Col xs={size} className='d-flex justify-content-center'>
             <FontAwesomeIcon 
@@ -12,7 +12,7 @@ const IconText = ({ icon, size = 1, color = '#000', className = '', children, })
                 color={color}
             />
         </Col>
-        <Col xs={12 - size} className={className}>
+        <Col xs={12 - size} className={textClassName}>
             { children }
         </Col>
     </Row>
