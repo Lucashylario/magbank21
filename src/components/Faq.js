@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Card, Accordion, Button } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Container, Row, Col, Card, Accordion } from 'react-bootstrap';
 import IconText from './IconText';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCreditCard, faWallet, faShieldAlt, faUserTie } from '@fortawesome/free-solid-svg-icons';
@@ -12,6 +12,16 @@ const Faq = () => {
         {icon: faShieldAlt, text: 'Token digital'},
         {icon: faUserTie, text: 'Produtos e serviços'},
     ];
+
+    const [index, setIndex] = useState(0);
+
+    const handleClick = (key) => {
+        setIndex(key);
+    };
+
+    useEffect(() => {
+        console.log(index);
+    }, [index]);
     
     return (
     <section className='faq text-light'>
@@ -23,26 +33,25 @@ const Faq = () => {
             <Row className='d-flex align-items-center justify-items-center'>
                 <Col className='d-lg-none mb-5' xs={12}>
                     <Row>
-                        {options.map(({ icon }) => (
-                            <Col className='d-flex justify-content-center'>
-                                <FontAwesomeIcon icon={icon} size='2x' color='#fff'/>
+                        {options.map(({ icon }, key) => (
+                            <Col className='d-flex justify-content-center' key={key}>
+                                <FontAwesomeIcon icon={icon} size='2x' color='#fff' onClick={() => handleClick(key)}/>
                             </Col>
                         ))}
                     </Row>
                 </Col>
                 <Col className='d-none d-lg-block'>
-                    {options.map(({ icon, text }) => (
-                        <IconText icon={icon} size={3} className='mb-3' textClassName='lead' color='#fff'>{text}</IconText>
+                    {options.map(({ icon, text }, key) => (
+                        <IconText icon={icon} size={3} className='faq-clickable mb-3' textClassName='lead' color='#fff' onClick={() => handleClick(key)} key={key}>{text}</IconText>
                     ))}
                 </Col>
                 <Col>
-                    <Accordion defaultActiveKey="0">
+                    <Accordion defaultActiveKey='0'>
                         <Card>
-                            <Card.Header>
-                                <Accordion.Toggle as={Button} variant='link' eventKey='0'>
-                                    Lorem ipsum dolor sit amet
-                                </Accordion.Toggle>
-                            </Card.Header>
+                            <Accordion.Toggle className='py-3 faq-clickable' as={Card.Header} eventKey='0'>
+                                Lorem ipsum dolor sit amet
+                            </Accordion.Toggle>
+
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt arcu vel 
@@ -55,11 +64,10 @@ const Faq = () => {
                             </Accordion.Collapse>
                         </Card>
                         <Card>
-                            <Card.Header>
-                                <Accordion.Toggle as={Button} variant='link' eventKey='1'>
-                                    Nulla porttitor eros ac ex tristique posuere
-                                </Accordion.Toggle>
-                            </Card.Header>
+                            <Accordion.Toggle className='py-3 faq-clickable' as={Card.Header} eventKey='1'>
+                                Nulla porttitor eros ac ex tristique posuere
+                            </Accordion.Toggle>
+                            
                             <Accordion.Collapse eventKey="1">
                                 <Card.Body>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -73,11 +81,10 @@ const Faq = () => {
                             </Accordion.Collapse>
                         </Card>
                         <Card>
-                            <Card.Header>
-                                <Accordion.Toggle as={Button} variant='link' eventKey='2'>
-                                    Quisque fringilla tincidunt arcu
-                                </Accordion.Toggle>
-                            </Card.Header>
+                            <Accordion.Toggle className='py-3 faq-clickable' as={Card.Header} eventKey='2'>
+                                Quisque fringilla tincidunt arcu
+                            </Accordion.Toggle>
+                            
                             <Accordion.Collapse eventKey="2">
                                 <Card.Body>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -91,11 +98,10 @@ const Faq = () => {
                             </Accordion.Collapse>
                         </Card>
                         <Card>
-                            <Card.Header>
-                                <Accordion.Toggle as={Button} variant='link' eventKey='3'>
-                                    Nam elementum lobortis purus a maximus tortor
-                                </Accordion.Toggle>
-                            </Card.Header>
+                            <Accordion.Toggle className='py-3 faq-clickable' as={Card.Header} eventKey='3'>
+                                Nam elementum lobortis purus a maximus tortor
+                            </Accordion.Toggle>
+                            
                             <Accordion.Collapse eventKey="3">
                                 <Card.Body>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
