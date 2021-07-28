@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Institutional from './components/Institutional';
 
 import posts from './data/posts';
+import Faq from './components/Faq';
 
 const App = () => (
     <div className="App">
@@ -19,6 +20,7 @@ const App = () => (
       <CenteredButton>Abra sua conta</CenteredButton>
 
       <Institutional />
+      <Faq />
     </div>
 );
 
