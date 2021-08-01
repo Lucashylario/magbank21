@@ -1,0 +1,12 @@
+@import '../variables';
+
+//@media screen and (max-width: 720) 
+
+.footer {
+    border-bottom: 0.4rem solid $color-secondary;
+
+    .img-space {
+        margin-left: 0.5rem;
+    }
+    
+}
