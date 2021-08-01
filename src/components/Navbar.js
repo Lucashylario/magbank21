@@ -3,7 +3,7 @@ import { Container, Navbar, Nav, ButtonGroup, Button, NavDropdown } from "react-
 import "./Navbar.scss";
 import logo from "../assets/images/magbank-logo.svg"
 
-const Navigation = () => (
+const Navigation = ({ handleCreateAcc }) => (
     <Navbar variant="dark" expand="lg">
         <Container>
             <Navbar.Brand href="#home">
@@ -35,7 +35,7 @@ const Navigation = () => (
                             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                         </NavDropdown>
                     </Button>
-                    <Button variant="outline-light">Abra sua conta</Button>
+                    <Button variant="outline-light" onClick={handleCreateAcc}>Abra sua conta</Button>
                 </ButtonGroup>            
             </Navbar.Collapse>
         </Container>
