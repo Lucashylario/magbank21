@@ -9,6 +9,7 @@ import Institutional from './components/Institutional';
 
 import posts from './data/posts';
 import Faq from './components/Faq';
+import Footer from './components/Footer';
 
 const App = () => (
     <div className="App">
@@ -21,6 +22,7 @@ const App = () => (
 
       <Institutional />
       <Faq />
+      <Footer />
     </div>
 );
 
