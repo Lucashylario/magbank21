@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Card, Accordion } from 'react-bootstrap';
 import IconText from './IconText'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,10 +18,6 @@ const Faq = () => {
     const handleClick = (key) => {
         setIndex(key);
     };
-
-    useEffect(() => {
-        console.log(index);
-    }, [index]);
     
     return (
         <section className='faq text-light'>
@@ -39,7 +35,7 @@ const Faq = () => {
                                     <FontAwesomeIcon 
                                         icon={icon} 
                                         size='2x' 
-                                        color={key === index ? '#fff' : '#BBB'} 
+                                        color={key === index ? '#fff' : '#fff'} 
                                         onClick={() => handleClick(key)}
                                     />
                                 </Col>
@@ -73,7 +69,7 @@ const Faq = () => {
                                 size={3} 
                                 className='faq-clickable mb-3' 
                                 textClassName='lead' 
-                                color={key === index ? '#fff' : '#BBB'} 
+                                color={key === index ? '#fff' : '#fff'} 
                                 onClick={() => handleClick(key)} 
                                 key={key}
                             >
@@ -83,10 +79,10 @@ const Faq = () => {
                     </Col>
 
                     <Col>
-                        <Accordion defaultActiveKey='0' activeKey={`${index}`}>
+                        <Accordion defaultActiveKey='0'>
                             <Card>
                                 <Accordion.Toggle className='py-3 faq-clickable' as={Card.Header} eventKey='0'>
-                                    Lorem ipsum dolor sit amet
+                                    Cartão de crédito
                                 </Accordion.Toggle>
 
                                 <Accordion.Collapse eventKey="0">
@@ -102,7 +98,7 @@ const Faq = () => {
                             </Card>
                             <Card>
                                 <Accordion.Toggle className='py-3 faq-clickable' as={Card.Header} eventKey='1'>
-                                    Nulla porttitor eros ac ex tristique posuere
+                                    Conta e abertura
                                 </Accordion.Toggle>
                                 
                                 <Accordion.Collapse eventKey="1">
@@ -119,7 +115,7 @@ const Faq = () => {
                             </Card>
                             <Card>
                                 <Accordion.Toggle className='py-3 faq-clickable' as={Card.Header} eventKey='2'>
-                                    Quisque fringilla tincidunt arcu
+                                    Token digital
                                 </Accordion.Toggle>
                                 
                                 <Accordion.Collapse eventKey="2">
@@ -136,7 +132,7 @@ const Faq = () => {
                             </Card>
                             <Card>
                                 <Accordion.Toggle className='py-3 faq-clickable' as={Card.Header} eventKey='3'>
-                                    Nam elementum lobortis purus a maximus tortor
+                                    Produtos e serviços
                                 </Accordion.Toggle>
                                 
                                 <Accordion.Collapse eventKey="3">
@@ -156,7 +152,6 @@ const Faq = () => {
                 </Row>
             </Container>
         </section>
-)
-};
+)};
 
 export default Faq;
