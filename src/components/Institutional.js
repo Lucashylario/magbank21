@@ -5,7 +5,7 @@ import './Institutional.scss';
 import { faGlobe, faMobile, faMobileAlt, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Institutional = () => (
-    <section className='institutional text-light py-5'>
+    <section className='institutional text-light py-5' id="quemsomos">
         <Container>
             <Row>
                 <Col xs={12} lg={5}></Col>

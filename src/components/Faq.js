@@ -20,7 +20,7 @@ const Faq = () => {
     };
     
     return (
-        <section className='faq text-light'>
+        <section className='faq text-light' id="faq">
             <Container className='py-5'>
                 <Row className='text-center'>
                     <h2 className='faq-title my-5'>Dúvidas frequentes</h2>
