@@ -11,6 +11,7 @@ import AccountModal from './components/AccountModal';
 import "./App.scss";
 
 import Home from './views/Home';
+import Login from './views/Login';
 
 const App = () => {
   const [ showModal, setShowModal ] = useState(false);
@@ -24,7 +25,7 @@ const App = () => {
           <Home handelClick={() => setShowModal(true)} />
         </Route>
         <Route path="/login">
-          <h2>Teste</h2>
+          <Login />
         </Route>
       </Switch>
 
