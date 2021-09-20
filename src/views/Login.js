@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
+import { Row, Col, Form, Button, Image } from "react-bootstrap";
 import logo from '../assets/images/MAGbank-logo-login.png';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,20 +15,22 @@ const Login = () => (
 
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Número da Conta</Form.Label>
+                            <Form.Label className='lead'><b>Número da Conta</b></Form.Label>
 
                             <Form.Control type="number" />
                             
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Senha</Form.Label>
+                            <Form.Label className='lead'><b>Senha</b></Form.Label>
                             <Form.Control type="password" />
                         </Form.Group>
 
-                        <Button variant="success" type="submit">
-                            Criar Conta
-                        </Button>
+                        <Link to='/dashboard'>
+                            <Button className='mt-3' variant="success" type="submit">
+                                Criar Conta
+                            </Button>
+                        </Link>
                     </Form>
                 </Col>
             </Row>
