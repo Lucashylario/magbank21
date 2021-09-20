@@ -3,6 +3,8 @@ import { Container, Row, Col, Card, Accordion } from 'react-bootstrap';
 import IconText from './IconText'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCreditCard, faWallet, faShieldAlt, faUserTie } from '@fortawesome/free-solid-svg-icons';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './Faq.scss';
 
 const Faq = () => {

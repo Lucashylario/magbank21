@@ -5,6 +5,8 @@ import { faFacebookSquare, faTwitter, faYoutube, } from '@fortawesome/free-brand
 import logo from '../assets/images/footer-logo.png';
 import appStore from '../assets/images/appStore.png';
 import googlePlay from '../assets/images/googlePlay.png';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.scss';
 
 const Footer = () => (

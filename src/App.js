@@ -8,6 +8,7 @@ import {
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AccountModal from './components/AccountModal';
+
 import "./App.scss";
 
 import Home from './views/Home';

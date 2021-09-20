@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
 import logo from '../assets/images/MAGbank-logo-login.png';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './Login.scss';
 
 const Login = () => (

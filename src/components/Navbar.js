@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Navbar, Nav, ButtonGroup, Button, NavDropdown } from "react-bootstrap";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Navbar.scss";
 import logo from "../assets/images/magbank-logo.svg"
 
