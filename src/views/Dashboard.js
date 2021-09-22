@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route,  } from "react-router";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,6 +10,14 @@ import './Dashboard.scss';
 import { Link } from "react-router-dom";
 
 const Dashboard = ({ className = false}) => {
+    const [ activeLink, setActiveLink ] = useState(0); 
+
+    const links = [
+        { text: 'Minha Conta', path: '/dashboard', exact: true },
+        { text: 'Pagamentos', path: '/dashboard/payments' },
+        { text: 'Extrato', path: '/dashboard/history' },
+    ];
+
     const data = {
         latestBalance: [
         {date: '22/07', description: 'SAQUE 24h 012345', value: '300,00' },
@@ -43,19 +51,11 @@ const Dashboard = ({ className = false}) => {
                         <p className='text-muted'>ag: 1234 c/c: 4321-5</p>
                     </Col>
                 </Row>
-                <div className="d-grid gap-2 ">
-                    <Link className='link-btn' to='/dashboard'>
-                        <Button className='dashboard__button dashboard__button--active text-start ms-4' variant='link' size='lg'>Minha Conta</Button>
+                {links.map(({ text, path, exact }, key) => (
+                    <Link className='link-btn' to={path} exact={exact ? exact : false } key={key}>
+                        <Button className={`dashboard__button text-start ${key === activeLink ? 'dashboard__button--active' : ''}`} variant='link' size='lg' block onClick={() => setActiveLink(key)}>{text}</Button>
                     </Link>
-
-                    <Link className='link-btn' to='/dashboard/payments'>
-                        <Button className='dashboard__button text-start ms-4' variant='link' size='lg'>Pagamentos</Button>
-                    </Link>
-
-                    <Link className='link-btn' to='/dashboard/history'>
-                        <Button className='dashboard__button text-start ms-4' variant='link' size='lg'>Extrato</Button>
-                    </Link>
-                </div>
+                ))}
             </Col>
             
             <Switch>

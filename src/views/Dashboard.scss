@@ -25,10 +25,16 @@
     &__button {
         color: $color-primary;
         text-decoration: none;
+        margin-bottom: 0.5rem;
 
         &:hover, &--active {
-            color: #fff;
+            color: #fff;            
             background-color: $color-primary;
+            text-decoration: none;
+        }
+
+        &:hover {            
+            background-color: $color-muted;
         }
     }
 
