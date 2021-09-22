@@ -1,4 +1,5 @@
 import React from "react";
+import { Switch, Route,  } from "react-router";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle, faUser } from "@fortawesome/free-solid-svg-icons";
@@ -6,6 +7,7 @@ import { faCircle, faUser } from "@fortawesome/free-solid-svg-icons";
 import AccountBalance from "../components/AccountBalance";
 
 import './Dashboard.scss';
+import { Link } from "react-router-dom";
 
 const Dashboard = ({ className = false}) => {
     const data = {
@@ -42,12 +44,31 @@ const Dashboard = ({ className = false}) => {
                     </Col>
                 </Row>
                 <div className="d-grid gap-2 ">
-                    <Button className='dashboard__button dashboard__button--active text-start ms-4' variant='link' size='lg'>Minha Conta</Button>
-                    <Button className='dashboard__button text-start ms-4' variant='link' size='lg'>Pagamentos</Button>
-                    <Button className='dashboard__button text-start ms-4' variant='link' size='lg'>Extrato</Button>
+                    <Link className='link-btn' to='/dashboard'>
+                        <Button className='dashboard__button dashboard__button--active text-start ms-4' variant='link' size='lg'>Minha Conta</Button>
+                    </Link>
+
+                    <Link className='link-btn' to='/dashboard/payments'>
+                        <Button className='dashboard__button text-start ms-4' variant='link' size='lg'>Pagamentos</Button>
+                    </Link>
+
+                    <Link className='link-btn' to='/dashboard/history'>
+                        <Button className='dashboard__button text-start ms-4' variant='link' size='lg'>Extrato</Button>
+                    </Link>
                 </div>
             </Col>
-            <AccountBalance data={data} />
+            
+            <Switch>
+                <Route path='/dashboard/history'>
+                    <h2>Extrato</h2>
+                </Route>
+                <Route path='/dashboard/payments'>
+                    <h2>Pagamentos</h2>
+                </Route>
+                <Route path='/dashboard'>
+                    <AccountBalance data={data} />
+                </Route>
+            </Switch>
         </Row>
     </Container>
 )};

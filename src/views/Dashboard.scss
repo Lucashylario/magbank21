@@ -14,7 +14,12 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-10%, -100%);
+        transform: translate(-50%, -100%);
+    }
+
+    .link-btn { 
+        display: grid;
+        text-decoration: none;
     }
 
     &__button {
