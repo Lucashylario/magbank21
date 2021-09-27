@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Button, Tabs, Tab, Form } from "react-bootstrap";
+import { Col, Row, Button, Tabs, Tab, Form } from "react-bootstrap";
 
 const AccountPayments = () => (
     <>
@@ -23,7 +23,33 @@ const AccountPayments = () => (
                         </Form>
                     </Tab>
                     <Tab eventKey='transfer' title='Transferência'>
-                        
+                        <Form className="ms-lg-4">
+                            <Row className='mt-4'>
+                                <Col>
+                                    <Form.Label className="mt-4 mt-lg-0"><b>Banco</b></Form.Label>
+                                    <Form.Control type="number" />
+                                </Col>
+                                <Col>
+                                    <Form.Label className="mt-4 mt-lg-0"><b>Agência</b></Form.Label>
+                                    <Form.Control type="number" />
+                                </Col>
+                                <Col>
+                                    <Form.Label><b>Conta corrente</b></Form.Label>
+                                    <Form.Control type="number" />
+                                </Col>
+                            </Row>
+                            <Row className='mt-4'>
+                                <Col>
+                                    <Form.Label className="mt-4 mt-lg-0"><b>Valor da tranferência</b></Form.Label>
+                                    <Form.Control type="number" />
+                                </Col>
+                                <Col>
+                                    <Form.Label><b>Identificação nos extratos</b></Form.Label>
+                                    <Form.Control />
+                                </Col>
+                            </Row>
+                            <Button className='mt-4' variant='success'>Continuar</Button>
+                        </Form>
                     </Tab>
                 </Tabs>
             </Col>            
