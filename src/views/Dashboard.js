@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle, faUser } from "@fortawesome/free-solid-svg-icons";
 
 import AccountBalance from "../components/AccountBalance";
+import AccountPayments from "../components/AccountPayments";
 
 import './Dashboard.scss';
 import { Link } from "react-router-dom";
@@ -63,7 +64,7 @@ const Dashboard = ({ className = false}) => {
                     <h2>Extrato</h2>
                 </Route>
                 <Route path='/dashboard/payments'>
-                    <h2>Pagamentos</h2>
+                    <AccountPayments />
                 </Route>
                 <Route path='/dashboard'>
                     <AccountBalance data={data} />
