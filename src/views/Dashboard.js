@@ -6,6 +6,7 @@ import { faCircle, faUser } from "@fortawesome/free-solid-svg-icons";
 
 import AccountBalance from "../components/AccountBalance";
 import AccountPayments from "../components/AccountPayments";
+import AccountHistory from "../components/AccountHistory";
 
 import './Dashboard.scss';
 import { Link } from "react-router-dom";
@@ -21,7 +22,7 @@ const Dashboard = ({ className = false}) => {
 
     const data = {
         latestBalance: [
-        {date: '22/07', description: 'SAQUE 24h 012345', value: '300,00' },
+        {date: '17/07', description: 'SAQUE 24h 012345', value: '300,00' },
         {date: '21/07', description: 'SUPERMERCADO 023456', value: '275,00' },
         {date: '20/07', description: 'NETFLIX 253483', value: '30,00' },
         {date: '15/07', description: 'FARMÁCIA 12125', value: '350,00' },
@@ -33,6 +34,17 @@ const Dashboard = ({ className = false}) => {
         {date: '15/08', description: 'FARMÁCIA 12125', value: '35,00' },
         {date: '16/08', description: 'SUPERMERCADO 023456', value: '275,00' },
     ],
+    history: [
+        {date: '17/07', description: 'SAQUE 24h 012345', value: '200,00-', balance: ''},
+        {date: '17/07', description: 'SALDO DO DIA', value: '', balance: '2.780,00'},
+        {date: '19/07', description: 'ESTACIONAMENTO 123234', value: '12,00-', balance: ''},
+        {date: '19/07', description: 'COMPRA INTERNET 123432', value: '250,00-', balance: ''},
+        {date: '19/07', description: 'SALDO DO DIA', value: '', balance: '2.318,00'},
+        {date: '21/07', description: 'SUPERMERCADO 3212332', value: '180,00-', balance: ''},
+        {date: '21/07', description: 'SHOPPING 123432', value: '100,00', balance: ''},
+        {date: '21/07', description: 'DEPÓSITO 123234', value: '1000,00', balance: ''},
+        {date: '22/07', description: 'SALDO DO DIA', value: '', balance: '2.576,00'},
+    ]
     };
 
     return (
@@ -61,7 +73,7 @@ const Dashboard = ({ className = false}) => {
             
             <Switch>
                 <Route path='/dashboard/history'>
-                    <h2>Extrato</h2>
+                    <AccountHistory data={data} />
                 </Route>
                 <Route path='/dashboard/payments'>
                     <AccountPayments />
